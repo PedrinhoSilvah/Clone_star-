@@ -1,0 +1,787 @@
+@use 'variaveis';
+
+
+
+body{
+    font-family: Avenir,sans-serif;
+    font-weight: 400;
+    background-color: #090b13;
+    margin: 0;
+    padding: 0;
+}
+
+#inicio{
+    background-image: url('../img/corpo-transformed.jpeg');
+   background-size: cover;
+}
+
+
+header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background-color: transparent;
+    transition: 1s;
+    z-index: 1;
+
+    @media (max-width: 760px){
+        height: 50px;   
+    }
+    
+
+    .logo-principal{
+        width: 100%;
+        margin-top: 10px;
+        
+        @media (max-width: 760px) {
+            svg{
+                width: 70px;
+                height: 20px;
+            }
+        }
+
+    }
+
+    .nav-bar{
+        margin-top: -10px;
+
+        @media (max-width:760px) {
+            .responsive{
+                opacity: 1;
+            }
+        }
+
+        
+
+        ul{
+            display: flex;
+            justify-content: end;
+
+           
+            .invisibol{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 11%;
+                border-radius: 5px;
+                border: none;
+                background-color: #fc3c36;
+                cursor: pointer;
+                margin-right: 8px;
+                text-transform: uppercase;
+               
+
+
+                @media (max-width: 760px){
+                   width: 80%;
+                }
+            }
+    
+            .enter{
+                padding: 15px 25px;
+                border-radius: 5px;
+                border: none;
+                background-color: #4F4F4F;
+                cursor: pointer;
+                margin-right: 40px;
+                text-align: center;
+                transition: all 0.3s;
+                text-transform: uppercase;
+                font-size: 10px;
+
+                @media (max-width: 760px){
+                    margin-right: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 7px 10px;
+                    
+                }
+                
+
+                &:hover{
+                  background-color: #363636;  
+                }
+               
+
+            }
+
+            li{
+                list-style: none;
+                text-decoration: none;
+
+
+                a{
+                    text-decoration: none;
+                    color: variaveis.$color;
+                    font-size: 16px;
+                    
+                    @media (max-width: 760px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+header.rolagem{
+    background-color: #090b13;
+
+}
+
+
+#transito{
+    opacity: 0;
+    transition: 1s;
+}
+
+#transito.opac{
+    opacity: 1;
+
+}
+
+#opaccy-btn{
+    opacity: 0;
+    transition: 1s;
+}
+
+#opaccy-btn.suith{
+    opacity: 1;
+}
+
+
+
+  
+
+  
+
+   
+
+.btn{
+    display: flex;
+    justify-content: end;
+    padding-right: 2%;
+    padding-top: 10px;
+
+        button{
+            
+            color: variaveis.$color;
+            font-size: 16px;
+          
+        }
+
+       
+
+}
+
+.container{
+    padding-top: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: variaveis.$color;
+
+    @media (max-width: 760px){
+        padding-top: 40%;
+    }
+
+            h3{
+                font-size: 28px;
+
+                @media (max-width: 760px) {
+                    font-size: 22px;
+                    text-align: center;
+                    
+                }
+            }
+
+            img{
+                width: 180px;
+                height: 54.53px;
+
+                @media (max-width: 760px){
+                    width: 160px;
+                    margin-bottom: -10px;
+                }
+                
+            }
+
+            .st{
+                background-color: #6421ff;
+                padding: 20.5px  200px;
+                border-radius: 5px;
+                font-size: 20px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                   a{
+                    text-decoration: none;
+                   }
+
+                   @media (max-width: 760px){
+                    padding: 13px 60px;
+
+                    a{
+                        font-size: 15px;
+                    }
+                   }
+            }
+
+            a{
+                color: variaveis.$color;
+
+                @media (max-width: 760px){
+                    font-size: 14px;
+                }
+            }
+            
+}
+
+.down-arrow{
+  
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 6px;
+
+    span{
+        animation: jump 1.75s  infinite ;
+    }
+
+    .down{
+        transition: color .8s;
+    }
+
+    .down:hover{
+        fill: #fff;
+    }
+
+    
+}
+
+@keyframes jump{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+
+
+  //  INICIO DOS STYLES SEÇÃO PLANOS
+
+
+ 
+
+#secao-planos{
+    margin-top: 10%;
+}
+h1{
+    text-align: center;
+    color: variaveis.$color;
+    font-size: 44px;
+    margin-bottom: 44px;
+    
+    @media (max-width:760px) {
+        font-size: 30px;
+    }
+}
+
+.plano{
+    display: flex;
+    justify-content: center;
+    color: variaveis.$color;
+    text-align: center;
+
+
+    @media (max-width:760px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+        div{
+            width: 300px;
+            height: 467px;
+            padding: 60px 44px 40px;
+            
+
+            img{
+                width: 292px;
+                height: 58.39px;
+            
+            }
+            h3{
+                font-size: 28px;
+                margin-bottom: -20px;
+
+                @media (max-width:760px){
+                    font-size: 22px;
+                }
+            }
+            p{
+               
+                color: #cacaca;
+                font-size: 18px;
+                padding-bottom: 25%;
+
+                @media (max-width:760px){
+                    font-size: 16px;
+                }
+            }
+
+            .cnfg{
+                padding-bottom: 5%;
+            }
+            
+            .assine{
+                background-color: #6421ff;
+                border: none;
+                cursor: pointer;
+                width: 90%; 
+                height: 60px;
+                border-radius: 5px;
+
+                a{
+                    text-decoration: none;
+                    color: variaveis.$color;
+                    padding: 16.6px 28px;
+                    font-size: 18px;
+
+                  
+                }
+              
+            }
+        }
+
+     
+
+        .comboplus{
+            width: 300px;
+            background-image: url('../img/backgroud.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+            @media (max-width:760px){
+                width: 270px;
+                margin-left: 20px;
+
+                img{
+                    margin-left: -10px;
+                }
+                
+
+            }
+            
+        }
+
+   
+
+}
+
+.obs{
+    font-size: 12px;
+    color: #cacaca;
+    text-align: center;
+    margin-top: -5%;
+}
+
+
+
+// INICIO DOS STYLES SEÇÃO YOU-PRIMARY
+
+
+#you-primary{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    
+
+    h2{
+        font-size: 40px;
+        color: variaveis.$color;
+        @media (max-width: 760px){
+            font-size: 25px;
+            
+        }
+    }
+
+    p{
+        font-size: 16px;
+        color: #cacaca;
+        @media (max-width: 760px){
+            font-size: 14px;
+            width: 300px;
+            
+        }
+    }
+
+    @media (max-width: 760px) {
+        margin-top: 40px;
+        img{
+            width: 350px;
+           
+        }
+    }
+}
+
+
+// INICIO DOS STYLES SEÇÃO ESPORTES
+
+
+
+#esportes{
+     max-width: 100%;
+
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        padding-left: 8%;
+        padding-right: 8%;
+
+        img{
+            width: 800px;
+            height: 700px;
+        }
+
+        @media (max-width:760px) {
+            flex-direction: column;
+            text-align: center;
+            
+            img{
+                width: 350px;
+                height: 300px;
+            }
+           
+        }
+
+    }
+
+    h2{
+        font-size: 40px;
+        color: variaveis.$color;
+        @media (max-width:760px){
+            font-size: 30px;
+        }
+    }
+
+    p{
+        font-size: 18px;
+        color: #cacaca;
+        @media (max-width:760px){
+            font-size: 14px;
+        }
+    }
+
+  
+    
+}
+
+
+// SEÇÃO DOS STYLES SIMPSONS
+
+
+#simpsons{
+    width: 100%;
+    height: 1400px;
+    background-image: url('../img/simpsons.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (max-width:760px) {
+      background-image: none;
+      background-color: #0072d2;
+      height: 400px;
+      margin-bottom: 100%;
+
+    }
+
+    .responsive-image{
+        display: none;
+        width: 100%;
+        height: 400px;
+
+        @media (max-width:760px) {
+            display: block;
+            background-image: url('../img/original.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+    }
+    
+    .container-text{
+        padding: 70.3px 0px 0px 100px ;
+       
+
+       @media (max-width:760px) {
+         padding: 20px;
+        background-color: #0072d2;
+       }
+    }
+
+
+    h2{
+        color: #f9f9f9;
+        font-size: 40px;
+        @media (max-width:760px){
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        
+    }
+    h5{
+        color: #f9f9f9;
+        font-size: 20px;
+        font-weight: 400;
+        @media (max-width:760px){
+            font-size: 15px;
+            text-align: center;
+        }
+       
+
+    }
+    p{
+        color: #cacaca;
+        font-size: 12px;
+        @media (max-width:760px){
+            font-size: 10px;
+            text-align: center;
+        }
+    }
+
+}
+
+// SEÇÃO DOS STYLES ASSISTA EM SEU DISPOSITIVOS
+
+
+#dispositivos{
+    color: #f9f9f9;
+    text-align: center;
+
+    h2{
+        font-size: 40px;
+        margin-top: 6%;
+
+        @media (max-width:760px){
+            font-size: 24px;
+        }
+    }
+
+    .control{
+       display: flex;
+       justify-content: center;
+
+       @media (max-width:760px){
+        flex-direction: column;
+        align-items: center;
+       }
+
+       h3{
+        font-size: 28px;
+
+        @media (max-width:760px){
+            font-size: 20px;
+        }
+       }
+       
+        div{
+
+            p{
+                margin: 0;
+                color: #cacaca;
+                font-size: 18px;
+
+                @media (max-width:760px){
+                    font-size: 15px;
+                }
+            }
+            img{
+                width: 438px;
+                height: 229px;
+
+                @media (max-width:760px){
+                    width: 400px;
+                    height: 200px;
+                }
+
+            }
+        }
+      
+      
+
+        
+    }
+
+
+}
+
+
+// SEÇÃO PERGUNTAS FREQUENTES
+
+
+#Perguntas{
+
+    margin-top: 10%;
+    h2{
+        font-size: 40px;
+        color: #f9f9f9;
+        text-align: center;
+
+        @media (max-width: 760px) {
+            font-size: 25px;
+        }
+    }
+}
+
+.containerBx{
+    max-width: 1700px;
+    border-radius: 5px;
+    padding: 10px;
+    margin:  5%;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+
+
+        .accordion_item{
+            margin-bottom: 10px;
+            color: #cacaca;
+            background-color: #35313f;
+
+            .accordion_item:hover{
+                opacity: 0.9s;
+            }
+
+            .accordion_header{
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+
+                h5{
+                    font-size: 20px;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    color: #f9f9f9;
+
+                    @media (max-width: 760px){
+                        font-size: 15px;
+                    }
+
+            }
+            .icon{
+                font-size: 34px;
+                font-weight: 600;
+                padding: 20px;
+                color: #f9f9f9;
+                
+            }
+        }
+        }
+    }
+
+    .accordion_content{
+        margin-left: 50px;
+        margin-right: 15px;
+        overflow: hidden;
+        height: 0;
+        transition: all .5s ease;
+        font-size: 18px;
+
+        @media (max-width: 760px){
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        ul{
+            li{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.active{
+    padding-bottom: 10px;
+}
+
+// FOOTER
+
+footer{
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 25px;
+    @media (max-width: 760px){
+      
+    }
+    p{
+        margin-bottom: 20px;
+        color: #cacaca;
+
+    }
+
+    span{
+        color: #ccc;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    span:hover{
+        color: #f9f9f9;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        @media (max-width: 760px) {
+            width: 80%;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        svg{
+            fill: #ccc;
+        }
+        
+        select{
+            background-color: transparent;
+            color: #ccc;
+            margin-right: 20px;
+            
+        }
+        option{
+            background-color: #f9f9f9;
+            color: #090b13;
+        }
+
+        li{
+            color: #ccc;
+            list-style: none;
+            padding-right: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+
+            @media (max-width: 760px) {
+                padding: 8px;    
+            }
+        }
+
+        li:hover{
+            color: #f9f9f9;
+        }
+    }
+    select{
+        cursor: pointer;
+    }
+}
