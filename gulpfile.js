@@ -4,7 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 
 function compilaSass(){
-    return gulp.src('./sass/star.scss')
+    return gulp.src('./sass/Star.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: 'compressed'    
